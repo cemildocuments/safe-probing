@@ -1,0 +1,12 @@
+{
+  "passive": {
+    "right": 7,
+    "risk_difference": -2.020605904817785e-14,
+    "information_difference": 2.291500322826323e-13
+  },
+  "frontloaded": {
+    "right": 7,
+    "risk_difference": 1.0880185641326534e-14,
+    "information_difference": -8.881784197001252e-15
+  }
+}

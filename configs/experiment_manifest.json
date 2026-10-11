@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "floating_point": "IEEE 754 binary64",
+  "threads": "up to 12; deterministic per-path seeds",
+  "columns": [
+    "time",
+    "int_x2",
+    "int_x4",
+    "int_x6",
+    "int_x8",
+    "int_dy",
+    "int_x2dy",
+    "int_x4dy",
+    "alarm",
+    "dose",
+    "squared_effort",
+    "terminal_state"
+  ],
+  "initial_state": 1.0,
+  "default_alarm": -1.0,
+  "robust_design_alarm": -0.6928203230275509,
+  "groups": {
+    "nominal_search": {
+      "seed_base": 12000000,
+      "seed_stride": 10000,
+      "candidates": 72,
+      "n_per_candidate": 6000,
+      "dt": 0.005,
+      "fractional_switch": false
+    },
+    "main": {
+      "seed_base": 30000000,
+      "seed_stride": 100000,
+      "conditions": 5,
+      "n_per_condition": 50000,
+      "dt": 0.000625
+    },
+    "noise": {
+      "seed_base": 40000000,
+      "seed_stride": 100000,
+      "conditions": 24,
+      "n_per_condition": 15000
+    },
+    "asymptotic": {
+      "seed_base": 190000000,
+      "seed_stride": 100000,
+      "conditions": 6,
+      "n_per_condition": 15000
+    },
+    "convergence": {
+      "seed_base": 50000000,
+      "seed_stride": 100000,
+      "conditions": 15,
+      "n_per_condition": 30000
+    },
+    "robustness": {
+      "seed_base": 60000000,
+      "seed_stride": 100000,
+      "conditions": 27,
+      "n_per_condition": 10000
+    },
+    "quartic": {
+      "seed_base": 70000000,
+      "seed_stride": 100000,
+      "conditions": 27,
+      "n_per_condition": 15000
+    },
+    "robust_search": {
+      "seed_base": 80000000,
+      "seed_stride": 10000,
+      "conditions": 324,
+      "n_per_condition": 4000
+    },
+    "robust_validation": {
+      "seed_base": 132400000,
+      "seed_stride": 100000,
+      "conditions": 18,
+      "n_per_condition": 40000
+    },
+    "coupled_check": {
+      "seed_base": 160000000,
+      "n": 20000
+    },
+    "sample_paths": {
+      "seed_base": 180000000,
+      "seed_stride": 10000,
+      "n_per_condition": 256
+    }
+  },
+  "seed_rule": "trajectory j uses seed_base + condition_index * seed_stride + j; sample-path source provides its separate increments",
+  "selected_nominal": {
+    "low": 0.5,
+    "high": 6.0,
+    "period": 20.0,
+    "duty": 0.09090909090909091,
+    "dose": 20.0,
+    "squared_effort": 70.0
+  },
+  "selected_robust": {
+    "low": 1.25,
+    "high": 6.0,
+    "period": 20.0,
+    "duty": 0.15789473684210525,
+    "dose": 40.0,
+    "squared_effort": 140.0
+  }
+}

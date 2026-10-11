@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this reproducible research software when reusing the code or numerical dataset."
+title: "Safe learning near tipping points: numerical experiments"
+type: software
+authors:
+  - family-names: Anonymous
+version: 1.0.0
+date-released: 2026-10-11
+license: MIT
+abstract: "Reproducible stopped-diffusion simulations, likelihood inference, constrained input searches, probability-density checks and synthetic sufficient-statistic datasets for learning near a fold bifurcation."
+keywords:
+  - tipping points
+  - stochastic dynamics
+  - experimental design
+  - parameter estimation
+  - safe probing
